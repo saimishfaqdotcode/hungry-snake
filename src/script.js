@@ -760,42 +760,36 @@ function changeDirection(
 // KEYBOARD CONTROLS
 // =========================
 
-window.addEventListener(
+document.addEventListener(
     "keydown",
     event => {
 
+        // Start / restart with Enter or Space
         if (
-            event.code === "Space" ||
-            event.key === "Enter"
+            event.code === "Enter" ||
+            event.code === "Space"
         ) {
 
             event.preventDefault();
 
-
             if (
-                modal.style.display !== "none"
+                startGameModal.style.display !== "none"
             ) {
 
-                if (
-                    startGameModal.style.display !==
-                    "none"
-                ) {
+                startGame();
 
-                    startButton.click();
+            } else if (
+                gameOverModal.style.display !== "none"
+            ) {
 
-                } else if (
-                    gameOverModal.style.display !==
-                    "none"
-                ) {
-
-                    restartButton.click();
-                }
+                restartGame();
             }
 
             return;
         }
 
 
+        // Snake movement
         const keyDirections = {
             ArrowUp: "up",
             ArrowRight: "right",
@@ -805,7 +799,7 @@ window.addEventListener(
 
 
         const newDirection =
-            keyDirections[event.key];
+            keyDirections[event.code];
 
 
         if (!newDirection) {
@@ -815,12 +809,12 @@ window.addEventListener(
 
         event.preventDefault();
 
+
         changeDirection(
             newDirection
         );
     }
 );
-
 
 // =========================
 // SWIPE CONTROLS
