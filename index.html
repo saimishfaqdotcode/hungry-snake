@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <link rel="icon" type="image/png" href="./src/assets/hungrySnake.png">
+    <link rel="stylesheet" href="./src/style.css">
+
+    <title>Hungry Snake</title>
+</head>
+
+<body>
+    <main>
+        <section class="game-section">
+
+            <header class="game-header">
+
+                <img
+                    src="./src/assets/hungrySnake.png"
+                    alt="Hungry Snake Logo"
+                    class="game-screen-logo"
+                >
+
+                <div class="infos">
+
+                    <div class="info">
+                        <h3>
+                            High Score:
+                            <span id="high-score">0</span>
+                        </h3>
+                    </div>
+
+                    <div class="info">
+                        <h3>
+                            Score:
+                            <span id="score">0</span>
+                        </h3>
+                    </div>
+
+                    <div class="info">
+                        <h3>
+                            Time:
+                            <span id="time">00:00</span>
+                        </h3>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <div
+                class="board"
+                aria-label="Snake game board"
+            ></div>
+
+
+            <div class="mobile-controls">
+
+                <button
+                    type="button"
+                    class="control-btn"
+                    data-direction="up"
+                    aria-label="Move up"
+                >
+                    ↑
+                </button>
+
+                <div class="horizontal-controls">
+
+                    <button
+                        type="button"
+                        class="control-btn"
+                        data-direction="left"
+                        aria-label="Move left"
+                    >
+                        ←
+                    </button>
+
+                    <button
+                        type="button"
+                        class="control-btn"
+                        data-direction="down"
+                        aria-label="Move down"
+                    >
+                        ↓
+                    </button>
+
+                    <button
+                        type="button"
+                        class="control-btn"
+                        data-direction="right"
+                        aria-label="Move right"
+                    >
+                        →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <div class="modal">
+
+            <div class="start-game">
+
+                <img
+                    src="./src/assets/hungrySnake.png"
+                    alt="Hungry Snake Logo"
+                    class="game-logo"
+                >
+
+                <h3>
+                    Welcome to <span>Hungry Snake</span>.
+                </h3>
+
+                <button
+                    type="button"
+                    class="btn btn-start"
+                >
+                    Start Game
+                </button>
+
+            </div>
+
+
+            <div class="game-over">
+
+                <img
+                    src="./src/assets/hungrySnake.png"
+                    alt="Hungry Snake Logo"
+                    class="game-logo"
+                >
+
+                <h3>
+                    Game Over
+                </h3>
+
+                <button
+                    type="button"
+                    class="btn btn-restart"
+                >
+                    Restart Game
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="./src/script.js"></script>
+</body>
+</html>
