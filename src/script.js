@@ -11,10 +11,6 @@ const highScoreElement = document.querySelector("#high-score");
 const scoreElement = document.querySelector("#score");
 const timeElement = document.querySelector("#time");
 
-const controlButtons =
-    document.querySelectorAll(".control-btn");
-
-
 // =========================
 // GAME SETTINGS
 // =========================
@@ -824,29 +820,6 @@ window.addEventListener(
         );
     }
 );
-
-
-// =========================
-// TOUCH CONTROLS
-// =========================
-
-controlButtons.forEach(button => {
-
-    button.addEventListener(
-        "pointerdown",
-        event => {
-
-            event.preventDefault();
-
-            const newDirection =
-                button.dataset.direction;
-
-            changeDirection(
-                newDirection
-            );
-        }
-    );
-});
 
 
 // =========================
